@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap');
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+  --font-body: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-heading: 'Outfit', 'Segoe UI', system-ui, sans-serif;
+
+  --bg: #f5f6fa;
+  --bg-alt: #eef0f5;
+  --surface: #ffffff;
+  --surface-2: #f9fafb;
+  --surface-hover: rgba(0,0,0,0.03);
+
+  --border: rgba(0,0,0,0.07);
+  --border-strong: rgba(0,0,0,0.12);
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+
+  --text-primary: #0d1321;
+  --text-secondary: #374151;
+  --text-tertiary: #6b7280;
+
+  --accent: #1a5a96;
+  --accent-dark: #0e3a62;
+  --accent-light: #2d7dd2;
+  --accent-gradient: linear-gradient(135deg, #0e3a62 0%, #1a5a96 50%, #2d7dd2 100%);
+  --accent-subtle: rgba(26, 90, 150, 0.07);
+  --accent-subtle-hover: rgba(26, 90, 150, 0.13);
+  --accent-shadow: rgba(26, 90, 150, 0.2);
+
+  --header-bg: rgba(245, 246, 250, 0.82);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.5);
+
+  --hero-overlay: linear-gradient(
+    160deg,
+    rgba(8, 20, 45, 0.7) 0%,
+    rgba(14, 35, 70, 0.6) 50%,
+    rgba(20, 50, 100, 0.5) 100%
+  );
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  --transition: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== DARK THEME ===== */
+[data-theme="dark"] {
+  --bg: #0b0f18;
+  --bg-alt: #10151f;
+  --surface: rgba(255,255,255,0.04);
+  --surface-2: rgba(255,255,255,0.06);
+  --surface-hover: rgba(255,255,255,0.07);
+
+  --border: rgba(255,255,255,0.07);
+  --border-strong: rgba(255,255,255,0.12);
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.35);
+  --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.5);
+
+  --text-primary: #edf0f5;
+  --text-secondary: #b8c1cc;
+  --text-tertiary: #7a8899;
+
+  --accent: #4d9de0;
+  --accent-dark: #2d7dd2;
+  --accent-light: #6bb3f0;
+  --accent-gradient: linear-gradient(135deg, #1a5a96 0%, #2d7dd2 50%, #4d9de0 100%);
+  --accent-subtle: rgba(77, 157, 224, 0.1);
+  --accent-subtle-hover: rgba(77, 157, 224, 0.18);
+  --accent-shadow: rgba(77, 157, 224, 0.2);
+
+  --header-bg: rgba(11, 15, 24, 0.85);
+  --glass-bg: rgba(15, 22, 38, 0.7);
+  --glass-border: rgba(255,255,255,0.07);
+
+  --hero-overlay: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.72) 0%,
+    rgba(5, 15, 35, 0.65) 50%,
+    rgba(10, 30, 60, 0.55) 100%
+  );
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 76px;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  background: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+a { color: inherit; font-weight: 500; text-decoration: none; }
+img { max-width: 100%; display: block; }
+h1, h2, h3, h4 {
+  margin: 0;
+  color: var(--text-primary);
+  font-family: var(--font-heading);
+  line-height: 1.12;
+}
+p { margin: 0; }
+button { font-family: inherit; cursor: pointer; }
+ul { margin: 0; padding: 0; list-style: none; }
+
+#root { min-height: 100vh; }
+
+/* ===== SHARED SECTION LAYOUT ===== */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+
+.section-title-lg {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: 18px;
+}
+
+.section-desc {
+  font-size: 1.05rem;
+  color: var(--text-tertiary);
+  max-width: 540px;
+  line-height: 1.7;
+}
+
+/* legacy shared */
+.section-kicker {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.section-header .section-title {
+  font-size: clamp(1.7rem, 4vw, 2.6rem);
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.section-header .section-desc {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ===== GLOBAL ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== BUTTONS ===== */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-gradient);
+  color: #fff;
+  padding: 13px 28px;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 16px var(--accent-shadow);
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px var(--accent-shadow);
+  filter: brightness(1.08);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text-primary);
+  padding: 12px 26px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1.5px solid var(--border-strong);
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.btn-outline:hover {
+  background: var(--surface);
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.btn-lg { padding: 15px 32px; font-size: 1rem; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  body { font-size: 15px; }
+}

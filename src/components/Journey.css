@@ -1,0 +1,166 @@
+/* ===== JOURNEY ===== */
+.journey-section {
+  padding: 100px 0;
+  background: var(--bg-alt);
+}
+
+.journey-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 28px;
+}
+
+.journey-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.journey-title {
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+/* Timeline */
+.journey-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.journey-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--border-strong) 8%,
+    var(--border-strong) 92%,
+    transparent 100%
+  );
+  transform: translateX(-50%);
+}
+
+/* Step */
+.journey-step {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: calc(50% + 36px);
+  padding-bottom: 32px;
+  position: relative;
+  animation: fadeUp 0.5s ease both;
+  opacity: 0;
+}
+
+.journey-step.right {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: calc(50% + 36px);
+}
+
+.journey-section.visible .journey-step {
+  animation: fadeUp 0.55s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Dot on center line */
+.journey-step::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 24px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border: 3px solid var(--bg-alt);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Step card */
+.step-card {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  max-width: 340px;
+  width: 100%;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.step-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-subtle);
+  color: var(--step-color, var(--accent));
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.step-card:hover .step-icon-wrap {
+  background: var(--accent-subtle-hover);
+}
+
+.step-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.step-num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--text-tertiary);
+  margin-bottom: 4px;
+}
+
+.step-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.step-desc {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+  line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+  .journey-section { padding: 72px 0; }
+  .journey-timeline::before { left: 22px; }
+
+  .journey-step,
+  .journey-step.right {
+    justify-content: flex-start;
+    padding-left: 60px;
+    padding-right: 0;
+  }
+
+  .journey-step::after {
+    left: 22px;
+    top: 20px;
+  }
+
+  .step-card { max-width: 100%; }
+}
