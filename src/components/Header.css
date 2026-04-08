@@ -5,15 +5,13 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  transition: background 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
-  background: transparent;
+  transition: box-shadow 0.3s ease;
+  background: var(--surface);
+  box-shadow: 0 1px 0 var(--border), 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
 .site-header.scrolled {
-  background: var(--header-bg);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: 0 1px 0 var(--border), 0 4px 24px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 0 var(--border), 0 4px 24px rgba(0, 0, 0, 0.08);
 }
 
 .header-inner {
@@ -150,8 +148,15 @@
   transition: background 0.15s;
 }
 
-.lang-option:hover { background: var(--surface-hover); color: var(--text-primary); }
-.lang-option.active { color: var(--accent); font-weight: 700; }
+.lang-option:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.lang-option.active {
+  color: var(--accent);
+  font-weight: 700;
+}
 
 /* Apply button */
 .btn-apply {
@@ -187,7 +192,9 @@
   transition: background 0.2s;
 }
 
-.burger-btn:hover { background: var(--surface); }
+.burger-btn:hover {
+  background: var(--surface);
+}
 
 /* Mobile menu */
 .mobile-menu {
@@ -222,7 +229,9 @@
   transition: background 0.2s;
 }
 
-.mobile-nav-link:hover { background: var(--surface-hover); }
+.mobile-nav-link:hover {
+  background: var(--surface-hover);
+}
 
 .mobile-apply {
   margin-top: 16px;
@@ -237,13 +246,30 @@
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
-  .header-nav-desktop { display: none; }
-  .burger-btn { display: flex; }
-  .btn-apply { display: none; }
-  .cabinet-btn { display: none; }
+  .header-nav-desktop {
+    display: none;
+  }
+
+  .burger-btn {
+    display: flex;
+  }
+
+  .btn-apply {
+    display: none;
+  }
+
+  .cabinet-btn {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-  .header-inner { padding: 0 16px; gap: 12px; }
-  .logo-img { height: 40px; }
+  .header-inner {
+    padding: 0 16px;
+    gap: 12px;
+  }
+
+  .logo-img {
+    height: 40px;
+  }
 }
