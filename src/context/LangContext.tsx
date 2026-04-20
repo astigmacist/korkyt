@@ -12,13 +12,12 @@ const translations: Record<string, Record<Lang, string>> = {
   'nav.apply': { ru: 'Подать заявку', en: 'Apply Now', kz: 'Өтінім беру' },
 
   // Hero
-  'hero.badge': { ru: 'Приём иностранных студентов — 2025/26', en: 'International Admissions — 2025/26', kz: 'Шетелдік студенттерді қабылдау — 2025/26' },
-  'hero.title1': { ru: 'Поступите в Казахстан —', en: 'Study in Kazakhstan —', kz: 'Қазақстанда оқыңыз —' },
-  'hero.title2': { ru: 'с нами легко', en: 'we make it easy', kz: 'бізбен оңай' },
+  'hero.title1': { ru: 'Ваш путь к международному образованию', en: 'Your Path to International Education', kz: 'Халықаралық білім алу жолыңыз' },
+  'hero.title2': { ru: 'начинается здесь', en: 'starts here', kz: 'осы жерден басталады' },
   'hero.subtitle': {
-    ru: 'Университет Коркыт Ата в Кызылорде. Государственный диплом, бюджетные места для иностранцев, полное сопровождение от подачи документов до выпуска.',
-    en: 'Korkyt Ata University in Kyzylorda. State-recognized diploma, budget places for international students, full support from application to graduation.',
-    kz: 'Қызылордадағы Қорқыт Ата атындағы университет. Мемлекеттік диплом, шетелдіктерге арналған бюджет орындары, өтінімнен бітіруге дейін толық сүйемелдеу.'
+    ru: 'Поступайте в один из ведущих региональных университетов Казахстана и получите качественное образование с полным сопровождением — от заявки и собеседования до адаптации на кампусе.',
+    en: 'Apply to one of Kazakhstan’s leading regional universities and receive quality education with full support from application and interview to campus adaptation.',
+    kz: 'Қазақстанның жетекші өңірлік университеттерінің біріне түсіп, өтінім мен сұхбаттан бастап кампусқа бейімделуге дейін толық қолдаумен сапалы білім алыңыз.'
   },
   'hero.cta_journey': { ru: 'Узнать путь поступления', en: 'Explore Admission Steps', kz: 'Түсу жолын білу' },
   'hero.cta_programs': { ru: 'Выбрать программу', en: 'Browse Programs', kz: 'Бағдарлама таңдау' },
@@ -35,135 +34,135 @@ const translations: Record<string, Record<Lang, string>> = {
   'highlights.kicker': { ru: 'Чек-лист абитуриента', en: 'Applicant Checklist', kz: 'Абитуриент чек-листі' },
   'highlights.title': { ru: 'Всё, что нужно знать перед поступлением', en: 'Everything You Need to Know Before Applying', kz: 'Түсу алдында білуіңіз керек нәрсенің бәрі' },
   'highlights.desc': {
-    ru: 'Собрали ключевые шаги — от подготовки документов до приезда в Кызылорду',
-    en: 'We gathered the key steps — from preparing documents to arriving in Kyzylorda',
-    kz: 'Құжаттарды дайындаудан Қызылордаға келуге дейін негізгі қадамдарды жинадық'
+    ru: 'Ключевые факты из материалов университета: документы, стоимость, проживание, виза и жизнь в Кызылорде.',
+    en: 'Key facts from the university materials: documents, tuition, housing, visa guidance and life in Kyzylorda.',
+    kz: 'Университет материалдарындағы негізгі деректер: құжаттар, оқу құны, тұру, виза және Қызылордадағы өмір.'
   },
 
   'hl.docs.title': { ru: 'Документы для поступления', en: 'Required Documents', kz: 'Түсу үшін құжаттар' },
   'hl.docs.text': {
-    ru: 'Диплом/аттестат + нотариальный перевод, транскрипт оценок, паспорт (копия), 6 фотографий 3×4, медицинская справка, сертификат по языку (при наличии). Все документы загружаются онлайн — приезжать не нужно.',
-    en: 'Diploma/certificate + notarized translation, transcript, passport copy, 6 photos 3×4, medical certificate, language certificate (if available). All documents uploaded online — no need to visit in person.',
-    kz: 'Диплом/аттестат + нотариалдық аударма, транскрипт, паспорт көшірмесі, 6 фото 3×4, медициналық анықтама, тіл сертификаты (болса). Барлық құжаттар онлайн жүктеледі — адамды барудың қажеті жоқ.'
+    ru: 'Паспорт или удостоверение личности, документ об образовании с приложением и нотариальным переводом, 6 фото 3×4. Базовый пакет загружается онлайн через портал.',
+    en: 'Passport or ID, education document with transcript and notarized translation, plus 6 passport photos. The core document package is uploaded online through the portal.',
+    kz: 'Паспорт немесе жеке куәлік, білімі туралы құжат пен қосымшасы нотариалдық аудармамен, сондай-ақ 3×4 көлеміндегі 6 фото қажет. Негізгі құжаттар портал арқылы онлайн жүктеледі.'
   },
 
   'hl.visa.title': { ru: 'Оформление визы', en: 'Visa Application', kz: 'Виза рәсімдеу' },
   'hl.visa.text': {
-    ru: 'После зачисления университет выдаёт официальное приглашение. С ним вы оформляете студенческую визу в посольстве РК в вашей стране. Срок оформления — до 30 дней.',
-    en: 'After enrollment, the university issues an official invitation letter. Use it to apply for a student visa at the Kazakh embassy in your country. Processing time: up to 30 days.',
-    kz: 'Тіркелгеннен кейін университет ресми шақыру хатын береді. Оны өз еліңіздегі ҚР елшілігінде студенттік виза алу үшін пайдаланасыз. Рәсімдеу мерзімі — 30 күнге дейін.'
+    ru: 'Для иностранных граждан на платной основе ЕНТ не требуется. После рассмотрения заявки международный офис подсказывает дальнейшие шаги по визе и въезду.',
+    en: 'International applicants studying on a paid basis do not need the national test. After the application review, the international office guides you through the next visa and arrival steps.',
+    kz: 'Ақылы негізде оқуға түсетін шетелдік азаматтарға ҰБТ талап етілмейді. Өтінім қаралғаннан кейін халықаралық бөлім виза мен келу қадамдарын түсіндіреді.'
   },
 
-  'hl.fee.title': { ru: 'Государственная пошлина', en: 'State Fee', kz: 'Мемлекеттік баж' },
+  'hl.fee.title': { ru: 'Стоимость и гранты', en: 'Tuition and Grants', kz: 'Оқу құны және гранттар' },
   'hl.fee.text': {
-    ru: '8 МРП ≈ 29 000 тг (≈ $65). Оплачивается при оформлении приглашения.',
-    en: '8 MRP ≈ 29,000 KZT (≈ $65). Paid when processing the university invitation.',
-    kz: '8 АЕК ≈ 29 000 тг (≈ $65). Шақыру хатын рәсімдеу кезінде төленеді.'
+    ru: 'По материалам университета стоимость бакалавриата начинается примерно от $1 000 в год. Для отдельных категорий абитуриентов доступны гранты и Foundation-траектории.',
+    en: 'According to the university materials, bachelor tuition starts from about $1,000 per year. Grants and foundation pathways are available for selected applicant categories.',
+    kz: 'Университет материалдарына сай бакалавриат құны жылына шамамен $1 000-нан басталады. Кейбір талапкерлер санаттары үшін гранттар мен Foundation бағыттары қарастырылған.'
   },
 
   'hl.flight.title': { ru: 'Перелёт в Кызылорду', en: 'Getting to Kyzylorda', kz: 'Қызылордаға ұшу' },
   'hl.flight.text': {
-    ru: 'Прямые рейсы из Алматы и Астаны. Аэропорт Кызылорды в 15 минутах от кампуса. Встреча в аэропорту организуется университетом.',
-    en: 'Direct flights from Almaty and Astana. Kyzylorda airport is 15 min from campus. The university organizes airport pickup.',
-    kz: 'Алматы мен Астанадан тікелей рейстер. Қызылорда аэропорты кампустан 15 минут. Университет аэропортта қарсы алады.'
+    ru: 'До Кызылорды удобно добираться внутренними рейсами через крупные города Казахстана. По прибытии университет помогает с первичной навигацией и заселением.',
+    en: 'Kyzylorda is conveniently reached by domestic flights via major cities of Kazakhstan. Upon arrival, the university helps with first-day navigation and settling in.',
+    kz: 'Қызылордаға Қазақстанның ірі қалалары арқылы ішкі рейстермен ыңғайлы жетуге болады. Келгеннен кейін университет бастапқы бағдарлау мен орналасуға көмектеседі.'
   },
 
   'hl.dorm.title': { ru: 'Общежитие', en: 'Dormitory', kz: 'Жатақхана' },
   'hl.dorm.text': {
-    ru: '5 общежитий на кампусе. Гарантировано место для иностранных студентов от ~8 000 тг/мес.',
-    en: '5 dormitories on campus. Guaranteed place for international students from ~8,000 KZT/month.',
-    kz: 'Кампуста 5 жатақхана. Шетелдік студенттерге ~8 000 тг/ай бастап орын кепілдендіріледі.'
+    ru: '6 общежитий и приоритетное размещение для иностранных студентов. В материалах университета ориентир по проживанию указан примерно от 10 000 тг/мес.',
+    en: '6 dormitories and priority placement for international students. University materials mention housing from around 10,000 KZT/month.',
+    kz: '6 жатақхана және шетелдік студенттер үшін басым орналастыру. Университет материалдарында тұру құны шамамен 10 000 тг/айдан басталатыны көрсетілген.'
   },
 
-  'hl.city.title': { ru: 'Кызылорда — комфортный город для жизни', en: 'Kyzylorda — comfortable city for life', kz: 'Қызылорда — тűрмыспен қолайлы қала' },
+  'hl.city.title': { ru: 'Кызылорда — комфортный город для жизни', en: 'Kyzylorda — comfortable city for life', kz: 'Қызылорда — өмір сүруге қолайлы қала' },
   'hl.city.text': {
-    ru: 'Население 400 000 человек, мягкий климат, низкая стоимость жизни, богатая культура. Студенческий город со множеством кафе, парков и транспортной доступностью.',
-    en: 'Population 400,000, mild climate, low cost of living, rich culture. A student-friendly city with cafes, parks and easy transport access.',
-    kz: '400 000 тұрғын, жайлы климат, тұрмыс қымбаттылығы аз, бай мәдениет. Кафе, саябақтар мен қолайлы көліктері бар студенттік қала.'
+    ru: 'Более 300 солнечных дней в году, доступная стоимость жизни и сильная культурная среда региона. Рядом Байконур, история Аральского моря и студенческая инфраструктура города.',
+    en: 'More than 300 sunny days a year, an affordable cost of living, and a strong regional cultural environment. Nearby are Baikonur, the Aral Sea context, and a student-friendly city infrastructure.',
+    kz: 'Жылына 300-ден астам шуақты күн, өмір сүру құнының қолжетімділігі және өңірдің бай мәдени ортасы бар. Жақын маңда Байқоңыр, Арал теңізі тарихы және студентке ыңғайлы қала инфрақұрылымы орналасқан.'
   },
 
   // Journey
   'journey.kicker': { ru: 'Шаги поступления', en: 'Admission Steps', kz: 'Түсу қадамдары' },
   'journey.title': { ru: 'Полный путь от заявки до учёбы', en: 'Full Journey from Application to Studies', kz: 'Өтінімнен оқуға дейінгі толық жол' },
   'journey.desc': {
-    ru: 'Прозрачный процесс — вы всегда знаете, что делать на каждом этапе',
-    en: 'A transparent process — you always know what to do at each stage',
-    kz: 'Ашық процесс — әр кезеңде не істеу керектігін әрқашан білесіз'
+    ru: 'Процесс построен по материалам приёмной комиссии: от выбора программы и загрузки документов до собеседования, приезда и адаптации.',
+    en: 'This flow follows the admission materials: from choosing a program and uploading documents to the interview, arrival, and adaptation.',
+    kz: 'Бұл жол қабылдау комиссиясының материалдарына сүйеніп жасалған: бағдарлама таңдаудан бастап құжат жүктеу, сұхбат, келу және бейімделуге дейін.'
   },
 
   'j.1': { ru: 'Выбрать программу', en: 'Choose a Program', kz: 'Бағдарлама таңдау' },
   'j.1.desc': {
-    ru: 'Изучите каталог программ, требования и проходные баллы на нашем сайте.',
-    en: 'Review the program catalog, requirements and entry scores on our website.',
-    kz: 'Сайтымыздан бағдарламалар каталогын, талаптарды және кіру балдарын қараңыз.'
+    ru: 'Сверьте направление обучения, язык программы и базовые требования по выбранному уровню подготовки.',
+    en: 'Review the study field, language of instruction, and core requirements for your chosen level.',
+    kz: 'Таңдалған дайындық деңгейі бойынша оқу бағытын, тілін және негізгі талаптарды тексеріңіз.'
   },
 
-  'j.2': { ru: 'Создать профиль абитуриента', en: 'Create Applicant Profile', kz: 'Абитуриент профилін жасау' },
+  'j.2': { ru: 'Заполнить онлайн-заявку', en: 'Complete the Online Application', kz: 'Онлайн өтінімді толтыру' },
   'j.2.desc': {
-    ru: 'Зарегистрируйтесь на платформе и заполните анкету. Это займёт 15–20 минут.',
-    en: 'Register on the platform and fill in your profile. This takes 15–20 minutes.',
-    kz: 'Платформада тіркеліп, анкетаны толтырыңыз. Бұл 15–20 минут алады.'
+    ru: 'Зарегистрируйтесь на портале, заполните анкету и укажите контактные данные для связи с приёмной комиссией.',
+    en: 'Register on the portal, complete the application form, and provide contact details for the admissions office.',
+    kz: 'Порталда тіркеліп, анкетаны толтырыңыз және қабылдау комиссиясымен байланыс үшін деректеріңізді көрсетіңіз.'
   },
 
   'j.3': { ru: 'Загрузить документы', en: 'Upload Documents', kz: 'Құжаттарды жүктеу' },
   'j.3.desc': {
-    ru: 'Диплом, транскрипт, паспорт, медсправка — всё в цифровом формате, без МФЦ.',
-    en: 'Diploma, transcript, passport, medical cert — everything digital, no in-person visit.',
-    kz: 'Диплом, транскрипт, паспорт, медициналық анықтама — бәрі цифрлы, МФЦ жоқ.'
+    ru: 'Загрузите паспорт, документ об образовании, приложение, переводы и фотографии в электронном виде.',
+    en: 'Upload your passport, education document, transcript, translations, and photos in digital form.',
+    kz: 'Паспортты, білімі туралы құжатты, қосымшаны, аудармаларды және фотоларды электронды түрде жүктеңіз.'
   },
 
-  'j.4': { ru: 'Рассмотрение заявки', en: 'Application Review', kz: 'Өтінімді қарау' },
+  'j.4': { ru: 'Получить дату собеседования', en: 'Receive the Interview Date', kz: 'Сұхбат күнін алу' },
   'j.4.desc': {
-    ru: 'Комиссия рассматривает заявку до 10 рабочих дней. Статус видно в личном кабинете.',
-    en: 'The committee reviews your application within 10 working days. Track status in your account.',
-    kz: 'Комиссия өтінімді 10 жұмыс күні ішінде қарайды. Мәртебені жеке кабинетте бақылаңыз.'
+    ru: 'После полной загрузки документов университет сообщает дату и формат собеседования в течение 3 рабочих дней.',
+    en: 'After the full document package is uploaded, the university shares the interview date and format within 3 business days.',
+    kz: 'Құжаттар толық жүктелгеннен кейін университет 3 жұмыс күні ішінде сұхбаттың күні мен форматын хабарлайды.'
   },
 
-  'j.5': { ru: 'Получить приглашение', en: 'Receive Invitation Letter', kz: 'Шақыру хатын алу' },
+  'j.5': { ru: 'Пройти собеседование', en: 'Pass the Interview', kz: 'Сұхбаттан өту' },
   'j.5.desc': {
-    ru: 'После одобрения университет выдаёт официальное приглашение для оформления визы.',
-    en: 'After approval, the university issues an official invitation letter for your visa.',
-    kz: 'Мақұлданғаннан кейін университет визаға арналған ресми шақыру хатын береді.'
+    ru: 'Собеседование проходит онлайн или офлайн, а результат публикуется в личном кабинете в течение 3 дней после интервью.',
+    en: 'The interview is held online or offline, and the result appears in your account within 3 days after the interview.',
+    kz: 'Сұхбат онлайн не офлайн форматта өтеді, ал нәтиже сұхбаттан кейін 3 күн ішінде жеке кабинетте жарияланады.'
   },
 
-  'j.6': { ru: 'Оформить визу и прилететь', en: 'Get Visa & Arrive', kz: 'Виза алу және келу' },
+  'j.6': { ru: 'Согласовать визу и приезд', en: 'Coordinate Visa and Arrival', kz: 'Виза мен келуді келісу' },
   'j.6.desc': {
-    ru: 'Оформите визу в посольстве РК, купите билет. Встреча в аэропорту организована.',
-    en: 'Apply for a visa at the Kazakh embassy, book your flight. Airport pickup is organized.',
-    kz: 'ҚР елшілігінде виза алыңыз, билет сатып алыңыз. Аэропортта қарсы алу ұйымдастырылған.'
+    ru: 'После положительного решения международный офис подсказывает дальнейшие шаги по визе, приезду и заселению.',
+    en: 'After a positive decision, the international office explains the next steps for visa matters, arrival, and accommodation.',
+    kz: 'Оң шешімнен кейін халықаралық бөлім виза, келу және орналасу бойынша келесі қадамдарды түсіндіреді.'
   },
 
-  'j.7': { ru: 'Зачисление и начало учёбы', en: 'Enrollment & Start Studying', kz: 'Тіркелу және оқуды бастау' },
+  'j.7': { ru: 'Прибытие и начало учёбы', en: 'Arrival and Start of Studies', kz: 'Келу және оқуды бастау' },
   'j.7.desc': {
-    ru: 'Регистрация по месту жительства, получение студенческого билета, начало семестра.',
-    en: 'Residence registration, student ID, start of semester — we guide you through everything.',
-    kz: 'Тұрғылықты жер бойынша тіркеу, студенттік билет алу, семестр басталуы — бәрінде жетелейміз.'
+    ru: 'После прибытия вы проходите регистрацию, заселение, первичную адаптацию и подключаетесь к учебному процессу.',
+    en: 'After arrival, you go through registration, housing placement, initial adaptation, and join the academic process.',
+    kz: 'Келгеннен кейін тіркеу, орналасу, бастапқы бейімделу кезеңдерінен өтіп, оқу процесіне қосыласыз.'
   },
 
   // Programs
   'programs.kicker': { ru: 'Образовательные программы', en: 'Educational Programs', kz: 'Білім беру бағдарламалары' },
   'programs.title': { ru: 'Выберите своё направление', en: 'Choose Your Direction', kz: 'Бағытыңызды таңдаңыз' },
   'programs.desc': {
-    ru: 'Государственный диплом казахстанского образца. Бюджетные и платные места для иностранных студентов.',
-    en: 'State-recognized Kazakh diploma. Budget and paid places for international students.',
-    kz: 'Мемлекеттік үлгідегі диплом. Шетелдік студенттерге бюджет және ақылы орындар.'
+    ru: 'Бакалавриат, магистратура, докторантура и подготовительные траектории на базе официальных перечней университета.',
+    en: 'Bachelor, master, doctoral, and preparatory tracks based on the official university lists.',
+    kz: 'Университеттің ресми тізімдері негізіндегі бакалавриат, магистратура, докторантура және дайындық бағыттары.'
   },
   'programs.all': { ru: 'Все программы', en: 'All Programs', kz: 'Барлық бағдарламалар' },
   'programs.popular': { ru: 'ПОПУЛЯРНО', en: 'POPULAR', kz: 'ТАНЫМАЛ' },
 
   'p.1.title': { ru: 'Бакалавриат', en: "Bachelor's Degree", kz: 'Бакалавриат' },
-  'p.1.meta': { ru: '4 года · 70+ специальностей · Очно', en: '4 years · 70+ specialties · Full-time', kz: '4 жыл · 70+ мамандық · Күндізгі' },
+  'p.1.meta': { ru: '4 года · широкий выбор направлений · Очная форма', en: '4 years · broad range of fields · Full-time', kz: '4 жыл · бағыттардың кең таңдауы · Күндізгі оқу' },
   'p.1.text': {
-    ru: 'Широкий выбор: инженерия, IT, педагогика, медицина, экономика, гуманитарные науки. Диплом признаётся в странах СНГ и за рубежом.',
-    en: 'Wide selection: engineering, IT, education, medicine, economics, humanities. Diploma recognized in CIS countries and abroad.',
-    kz: 'Кең таңдау: инженерлік, IT, педагогика, медицина, экономика, гуманитарлық ғылымдар. Диплом ТМД елдерінде және шетелде танылады.'
+    ru: 'В официальных перечнях представлены педагогика, языки, IT и AI, экономика, право, инженерные, аграрные и социальные направления.',
+    en: 'The official lists include education, languages, IT and AI, economics, law, engineering, agriculture, and social fields.',
+    kz: 'Ресми тізімдерде педагогика, тілдер, IT және AI, экономика, құқық, инженерлік, аграрлық және әлеуметтік бағыттар бар.'
   },
   'p.1.spec1': { ru: '🖥 Информационные технологии', en: '🖥 Information Technologies', kz: '🖥 Ақпараттық технологиялар' },
   'p.1.spec2': { ru: '⚙️ Инженерные направления', en: '⚙️ Engineering Programs', kz: '⚙️ Инженерлік бағыттар' },
   'p.1.spec3': { ru: '📊 Экономика и менеджмент', en: '📊 Economics & Management', kz: '📊 Экономика және менеджмент' },
 
   'p.2.title': { ru: 'Магистратура', en: "Master's Degree", kz: 'Магистратура' },
-  'p.2.meta': { ru: '2 года · Очная и заочная', en: '2 years · Full-time & Part-time', kz: '2 жыл · Күндізгі және сырттай' },
+  'p.2.meta': { ru: '2 года · научно-педагогическая и профильная', en: '2 years · research and professional tracks', kz: '2 жыл · ғылыми-педагогикалық және бейіндік' },
   'p.2.text': {
     ru: 'Научно-педагогическая и профильная магистратура. Возможность продолжить исследовательскую карьеру или углубить профессиональные компетенции.',
     en: 'Research and professional master\'s programs. Opportunity to pursue a research career or deepen professional expertise.',
@@ -184,26 +183,26 @@ const translations: Record<string, Record<Lang, string>> = {
   'support.kicker': { ru: 'Поддержка студентов', en: 'Student Support', kz: 'Студенттерді қолдау' },
   'support.title': { ru: 'Помогаем на каждом этапе', en: 'We Help at Every Stage', kz: 'Әр кезеңде көмектесеміз' },
   'support.desc': {
-    ru: 'После зачисления начинается самое важное — адаптация. Мы сопровождаем с первого дня до выпуска.',
-    en: 'After enrollment, the most important stage begins — adaptation. We support you from day one to graduation.',
-    kz: 'Тіркелгеннен кейін ең маңызды кезең басталады — бейімделу. Біз сізді бірінші күннен бітіруге дейін сүйемелдейміз.'
+    ru: 'Международный офис и университетские службы помогают с визовыми вопросами, проживанием, регистрацией и первыми бытовыми шагами.',
+    en: 'The international office and university services help with visa matters, housing, registration, and the first practical steps after arrival.',
+    kz: 'Халықаралық бөлім мен университет қызметтері виза, тұру, тіркелу және келгеннен кейінгі алғашқы тұрмыстық қадамдар бойынша көмектеседі.'
   },
 
   's.1.title': { ru: 'Виза и миграционный учёт', en: 'Visa & Migration Registration', kz: 'Виза және миграциялық есеп' },
-  's.1.p1': { ru: 'Помощь с оформлением студенческой визы', en: 'Assistance with student visa application', kz: 'Студенттік виза рәсімдеуге көмек' },
-  's.1.p2': { ru: 'Регистрация по месту пребывания (5 рабочих дней)', en: 'Residence registration (5 working days)', kz: 'Тұрғылықты жер бойынша тіркеу (5 жұмыс күні)' },
-  's.1.p3': { ru: 'Продление визы и миграционного статуса', en: 'Visa and migration status renewal', kz: 'Виза және миграциялық мәртебені ұзарту' },
-  's.1.p4': { ru: 'Помощь с получением ИИН', en: 'Support with obtaining IIN (tax ID)', kz: 'ЖСН алуға жәрдем' },
+  's.1.p1': { ru: 'Консультации по студенческой визе и перечню документов', en: 'Guidance on student visa requirements and documents', kz: 'Студенттік виза талаптары мен құжаттары бойынша кеңес' },
+  's.1.p2': { ru: 'Помощь с регистрацией после прибытия', en: 'Help with registration after arrival', kz: 'Келгеннен кейін тіркелуге көмек' },
+  's.1.p3': { ru: 'Сопровождение по продлению визы и миграционного статуса', en: 'Support with visa extension and migration status renewal', kz: 'Визаны және көші-қон мәртебесін ұзарту бойынша сүйемелдеу' },
+  's.1.p4': { ru: 'Связь с международным офисом по индивидуальным случаям', en: 'Direct contact with the international office for individual cases', kz: 'Жеке жағдайлар бойынша халықаралық бөліммен тікелей байланыс' },
 
   's.2.title': { ru: 'Жильё и кампус', en: 'Housing & Campus', kz: 'Тұрғын үй және кампус' },
-  's.2.p1': { ru: '5 общежитий, место гарантировано иностранцам', en: '5 dormitories, place guaranteed for internationals', kz: '5 жатақхана, шетелдіктерге орын кепілдендіріледі' },
-  's.2.p2': { ru: 'Столовые, медпункт, спортзалы на кампусе', en: 'Canteens, medical center, gyms on campus', kz: 'Асхана, медпункт, спортзалдар кампуста' },
-  's.2.p3': { ru: 'Транспорт от кампуса до центра города', en: 'Transport from campus to city center', kz: 'Кампустан қала орталығына дейін көлік' },
+  's.2.p1': { ru: '6 общежитий и приоритетное размещение для иностранных студентов', en: '6 dormitories and priority placement for international students', kz: '6 жатақхана және шетелдік студенттер үшін басым орналастыру' },
+  's.2.p2': { ru: 'Столовые, медицинская инфраструктура и учебные пространства на кампусе', en: 'Dining areas, medical infrastructure, and study spaces on campus', kz: 'Кампустегі асханалар, медициналық инфрақұрылым және оқу кеңістіктері' },
+  's.2.p3': { ru: 'Помощь с ориентацией по транспорту и городской инфраструктуре', en: 'Guidance on transport routes and city infrastructure', kz: 'Көлік бағыттары мен қала инфрақұрылымы бойынша бағдар беру' },
 
   's.3.title': { ru: 'Адаптация и кураторы', en: 'Adaptation & Mentors', kz: 'Бейімделу және кураторлар' },
   's.3.p1': { ru: 'Персональный куратор на период адаптации', en: 'Personal mentor during adaptation period', kz: 'Бейімделу кезінде жеке куратор' },
-  's.3.p2': { ru: 'Помощь с банковским счетом и SIM-картой', en: 'Help with bank account and SIM card', kz: 'Банк шоты және SIM карта алуға жәрдем' },
-  's.3.p3': { ru: 'Студенческий клуб иностранных студентов', en: 'International student club', kz: 'Шетелдік студенттер клубы' },
+  's.3.p2': { ru: 'Подсказки по бытовым вопросам: связь, сервисы, городская среда', en: 'Practical help with mobile service, daily services, and navigating the city', kz: 'Байланыс, сервистер және қалада бағдарлану бойынша тұрмыстық көмек' },
+  's.3.p3': { ru: 'Вовлечение в студенческую среду и международное сообщество университета', en: 'Integration into student life and the university international community', kz: 'Студенттік ортаға және университеттің халықаралық қауымдастығына бейімдеу' },
 
   // FAQ
   'faq.kicker': { ru: 'Часто задаваемые вопросы', en: 'Frequently Asked Questions', kz: 'Жиі қойылатын сұрақтар' },
@@ -223,9 +222,9 @@ const translations: Record<string, Record<Lang, string>> = {
 
   'faq.2.q': { ru: 'Сколько стоит обучение?', en: 'How much does studying cost?', kz: 'Оқу қанша тұрады?' },
   'faq.2.a': {
-    ru: 'Стоимость зависит от программы и формы обучения. Бакалавриат: от 450 000 до 900 000 тг в год ($1 000–2 000). Для иностранных студентов доступны бюджетные места по квоте Министерства образования. Уточняйте актуальные данные при подаче заявки.',
-    en: 'Cost depends on program and form. Bachelor\'s: from 450,000 to 900,000 KZT/year ($1,000–2,000). Budget places are available for international students through Ministry of Education quota. Check current rates when applying.',
-    kz: 'Баға бағдарламаға және оқу нысанына байланысты. Бакалавриат: жылына 450 000–900 000 тг ($1 000–2 000). Шетелдік студенттерге Білім министрлігінің квотасы бойынша бюджет орындары бар. Өтінім берген кезде ағымдағы деректерді нақтылаңыз.'
+    ru: 'Стоимость зависит от программы и формы обучения. В ваших новых материалах бакалавриат указан как стартующий примерно от $1 000 в год, а точные суммы университет рекомендует подтверждать при подаче заявки.',
+    en: 'Cost depends on the program and study format. Your newer materials mention bachelor studies starting from about $1,000 per year, while exact fees should be confirmed during application.',
+    kz: 'Баға бағдарламаға және оқу нысанына байланысты. Жаңа материалдарыңызда бакалавриат шамамен жылына $1 000-нан басталатыны көрсетілген, ал нақты соманы өтінім кезінде университетпен нақтылау ұсынылады.'
   },
 
   'faq.3.q': { ru: 'Нужно ли знать казахский или русский язык?', en: 'Do I need to know Kazakh or Russian?', kz: 'Қазақша немесе орысша білу керек пе?' },
@@ -237,30 +236,30 @@ const translations: Record<string, Record<Lang, string>> = {
 
   'faq.4.q': { ru: 'Как получить приглашение от университета?', en: 'How do I get the university invitation letter?', kz: 'Университеттен шақыру хатын қалай алуға болады?' },
   'faq.4.a': {
-    ru: 'После одобрения вашей заявки комиссией, университет автоматически оформляет приглашение. Документ отправляется вам в личный кабинет и по электронной почте. Государственная пошлина за оформление — 8 МРП (≈ 29 000 тг).',
-    en: 'After your application is approved by the committee, the university automatically prepares the invitation letter. The document is sent to your personal account and email. The state fee for processing is 8 MRP (≈ 29,000 KZT).',
-    kz: 'Комиссия өтінімді мақұлдағаннан кейін университет автоматты түрде шақыру хатын дайындайды. Құжат жеке кабинетіңізге және электрондық поштаңызға жіберіледі. Рәсімдеу үшін мемлекеттік баж — 8 АЕК (≈ 29 000 тг).'
+    ru: 'После положительного решения по заявке университет отправляет дальнейшие инструкции через личный кабинет и контакты, указанные в анкете. Формат визового сопровождения уточняется международным офисом по вашему кейсу.',
+    en: 'After a positive application decision, the university sends the next instructions through your account and the contact details from the application. The visa-support format is clarified by the international office for your case.',
+    kz: 'Өтінім бойынша оң шешім шыққаннан кейін университет келесі нұсқаулықтарды жеке кабинет пен анкетаңыздағы байланыс арналары арқылы жібереді. Визаға қатысты сүйемелдеу форматын халықаралық бөлім сіздің жағдайыңызға қарай нақтылайды.'
   },
 
   'faq.5.q': { ru: 'Как оформить студенческую визу?', en: 'How do I get a student visa?', kz: 'Студенттік визаны қалай рәсімдеуге болады?' },
   'faq.5.a': {
-    ru: 'Имея на руках приглашение от университета, обратитесь в посольство или консульство РК в вашей стране. Предоставьте: приглашение, паспорт, фото, медсправку. Срок рассмотрения — до 30 рабочих дней. Виза выдаётся на 1 год с возможностью продления.',
-    en: 'With the university invitation in hand, visit the Kazakhstan embassy or consulate in your country. Provide: invitation, passport, photo, medical certificate. Processing: up to 30 working days. Visa is issued for 1 year, renewable.',
-    kz: 'Университеттің шақыру хаты бар болса, өз еліңіздегі ҚР елшілігіне немесе консулдығына барыңыз. Ұсыныңыз: шақыру, паспорт, фото, медициналық анықтама. Қарау мерзімі — 30 жұмыс күніне дейін. Виза 1 жылға беріледі, ұзартылуы мүмкін.'
+    ru: 'Обычно оформление проходит через посольство или консульство Казахстана в вашей стране на основании документов, согласованных после одобрения заявки. Точный пакет и сроки зависят от гражданства, поэтому их нужно дополнительно уточнять у консульства и международного офиса.',
+    en: 'Student visa processing usually goes through the Kazakhstan embassy or consulate in your country based on the documents coordinated after your application is approved. The exact document list and timeline depend on citizenship, so they should be confirmed with the consulate and the international office.',
+    kz: 'Студенттік виза әдетте өтінім мақұлданғаннан кейін келісілетін құжаттар негізінде өз еліңіздегі Қазақстан елшілігі немесе консулдығы арқылы рәсімделеді. Нақты құжаттар тізімі мен мерзім азаматтыққа байланысты болғандықтан, оларды консулдық пен халықаралық бөлімнен нақтылау қажет.'
   },
 
   'faq.6.q': { ru: 'Где будут проживать иностранные студенты?', en: 'Where will international students live?', kz: 'Шетелдік студенттер қайда тұрады?' },
   'faq.6.a': {
-    ru: 'На кампусе 5 современных общежитий. Для иностранных студентов место гарантировано. Стоимость: от 8 000 тг/месяц (~$18). В общежитиях есть Wi-Fi, кухни, прачечные, охрана 24/7.',
-    en: 'The campus has 5 modern dormitories. Places are guaranteed for international students. Cost: from 8,000 KZT/month (~$18). Dormitories have Wi-Fi, kitchens, laundry, 24/7 security.',
-    kz: 'Кампуста 5 заманауи жатақхана бар. Шетелдік студенттерге орын кепілдендіріледі. Бағасы: айына 8 000 тг-дан (~$18). Жатақханаларда Wi-Fi, ас үй, кір жуатын бөлме, 24/7 қауіпсіздік бар.'
+    ru: 'У университета 6 общежитий, а иностранным студентам предоставляется приоритетное размещение. В материалах университета указан ориентир по проживанию примерно от 10 000 тг в месяц, но точные условия лучше подтверждать при заселении.',
+    en: 'The university has 6 dormitories, and international students receive priority placement. University materials mention housing from around 10,000 KZT per month, but exact conditions should be confirmed during placement.',
+    kz: 'Университетте 6 жатақхана бар, ал шетелдік студенттерге басым орналастыру қарастырылған. Университет материалдарында тұру құны шамамен айына 10 000 теңгеден басталатыны көрсетілген, бірақ нақты шарттарды орналасу кезінде нақтылаған дұрыс.'
   },
 
   'faq.7.q': { ru: 'Как добраться до Кызылорды?', en: 'How to get to Kyzylorda?', kz: 'Қызылордаға қалай жетуге болады?' },
   'faq.7.a': {
-    ru: 'Прямые авиарейсы из Алматы (1.5 ч), Астаны (2 ч). Международный аэропорт Кызылорды в 15 минутах от кампуса. Университет организует трансфер из аэропорта при предварительном уведомлении.',
-    en: 'Direct flights from Almaty (1.5h), Astana (2h). Kyzylorda International Airport is 15 minutes from campus. The university organizes airport transfer with prior notice.',
-    kz: 'Алматыдан тікелей ұшу (1.5 сағ), Астанадан (2 сағ). Қызылорданың халықаралық аэропорты кампустан 15 минутта. Университет алдын ала хабар берілген жағдайда аэропорттан трансфер ұйымдастырады.'
+    ru: 'Обычно студенты добираются до Кызылорды через внутренние авиарейсы из крупных городов Казахстана. После прибытия университет помогает с навигацией, регистрацией и заселением.',
+    en: 'Students usually reach Kyzylorda via domestic flights from major cities of Kazakhstan. After arrival, the university helps with navigation, registration, and settling in.',
+    kz: 'Студенттер Қызылордаға әдетте Қазақстанның ірі қалаларынан ішкі рейстер арқылы келеді. Келгеннен кейін университет бағдарлау, тіркелу және орналасу бойынша көмектеседі.'
   },
 
   'faq.8.q': { ru: 'Нужно ли приезжать для подачи документов?', en: 'Do I need to visit in person to apply?', kz: 'Құжат тапсыру үшін өзім келуім керек пе?' },

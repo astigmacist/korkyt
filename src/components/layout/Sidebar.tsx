@@ -12,10 +12,9 @@ import {
   HelpCircle, Bot, Mail, Phone, Database,
   Home, MapPinned, AtSign, Share2, Timer,
   ChevronRight, ChevronLeft,
-  Sun, Moon, LogIn
+  LogIn
 } from 'lucide-react'
-import { useTheme } from '../../context/ThemeContext'
-import { useLang, type Lang } from '../../context/LangContext'
+import { useLang } from '../../context/LangContext'
 import logo from '../../assets/logo.png'
 
 interface SubItem {
@@ -165,8 +164,7 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ collapsed, onCollapse, mobileOpen, onMobileClose }: SidebarProps) {
-  const { theme, toggleTheme } = useTheme()
-  const { lang, setLang } = useLang()
+  const { lang } = useLang()
   const location = useLocation()
   const [openSections, setOpenSections] = useState<Set<string>>(() => {
     const active = navSections.find(s =>
@@ -183,12 +181,6 @@ export default function Sidebar({ collapsed, onCollapse, mobileOpen, onMobileClo
       return next
     })
   }
-
-  const langOptions: { code: Lang; label: string }[] = [
-    { code: 'ru', label: 'Рус' },
-    { code: 'en', label: 'Eng' },
-    { code: 'kz', label: 'Қаз' },
-  ]
 
   const sidebarClasses = [
     'portal-sidebar',
@@ -235,7 +227,9 @@ export default function Sidebar({ collapsed, onCollapse, mobileOpen, onMobileClo
             onClick={onMobileClose}
           >
             <Home size={18} className="sidebar-item-icon" />
-            <span className="sidebar-item-label">Главная</span>
+            <span className="sidebar-item-label">
+              {lang === 'en' ? 'Home' : lang === 'kz' ? 'Басты бет' : 'Главная'}
+            </span>
           </NavLink>
 
           {navSections.map(section => {
@@ -307,27 +301,8 @@ export default function Sidebar({ collapsed, onCollapse, mobileOpen, onMobileClo
             onClick={onMobileClose}
           >
             <LogIn size={18} className="sidebar-item-icon" style={{ color: 'var(--accent)' }} />
-            <span className="sidebar-item-label">Подать заявку</span>
+            <span className="sidebar-item-label">{lang === 'en' ? 'Apply now' : lang === 'kz' ? 'Өтінім беру' : 'Подать заявку'}</span>
           </NavLink>
-
-          <div className="sidebar-footer-actions">
-            {/* Theme toggle */}
-            <button className="sidebar-icon-btn" onClick={toggleTheme} aria-label="Toggle theme">
-              {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
-            </button>
-
-            {/* Lang switcher */}
-            <select
-              className="sidebar-lang-select"
-              value={lang}
-              onChange={e => setLang(e.target.value as Lang)}
-              aria-label="Language"
-            >
-              {langOptions.map(opt => (
-                <option key={opt.code} value={opt.code}>{opt.label}</option>
-              ))}
-            </select>
-          </div>
         </div>
       </aside>
     </>

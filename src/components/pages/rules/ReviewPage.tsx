@@ -1,11 +1,35 @@
 import PageHeader from '../../ui/PageHeader'
+import { interviewFacts } from '../../../content/siteContent'
+
 export default function ReviewPage() {
-  return (<>
-    <PageHeader kicker="Правила приема" title="Процесс рассмотрения" desc="Как приёмная комиссия рассматривает заявки иностранных студентов." />
-    <div className="steps-list">
-      {[['Проверка комплектности документов','1–3 рабочих дня. Вам придёт уведомление о получении заявки.'],['Оценка академических результатов','3–5 рабочих дней. Комиссия проверяет оценки и соответствие программе.'],['Решение по заявке','До 10 рабочих дней. Статус обновится в личном кабинете.'],['Оформление приглашения','3–5 рабочих дней. При одобрении université оформляет официальное приглашение.']].map(([t,d],i)=>(
-        <div key={i} className="step-item"><div className="step-item-num">{i+1}</div><div className="step-item-body"><h4>{t}</h4><p>{d}</p></div></div>
-      ))}
-    </div>
-  </>)
+  return (
+    <>
+      <PageHeader
+        kicker="Правила приема"
+        title="Процесс рассмотрения"
+        desc="После загрузки полного пакета документов университет переводит заявку в формат собеседования и дальнейшего академического рассмотрения."
+      />
+
+      <div className="steps-list">
+        {interviewFacts.map((item, index) => (
+          <div key={item.title} className="step-item">
+            <div className="step-item-num">{index + 1}</div>
+            <div className="step-item-body">
+              <h4>{item.title}</h4>
+              <p>{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="info-card">
+        <h3>На что ориентируется комиссия</h3>
+        <p>
+          По вашим материалам это не тяжёлый экзамен, а проверка мотивации, интереса к выбранной
+          специальности и базовой академической подготовки. Такой формат особенно удобен для
+          иностранных абитуриентов, потому что не требует приезда до получения решения.
+        </p>
+      </div>
+    </>
+  )
 }

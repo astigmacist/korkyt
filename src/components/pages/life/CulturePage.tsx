@@ -1,4 +1,20 @@
 import PageHeader from '../../ui/PageHeader'
+import { lifeSections } from '../../../content/siteContent'
+
 export default function CulturePage() {
-  return (<><PageHeader kicker="Быт и адаптация" title="Культурная адаптация" desc="Программы помощи иностранным студентам в адаптации к казахстанской культуре." /><div className="info-card"><h3>Подробнее</h3><p>Университет обеспечивает комфортные условия для проживания и учёбы иностранных студентов. По всем вопросам обращайтесь в Международный отдел.</p></div></>)
+  const section = lifeSections.culture
+
+  return (
+    <>
+      <PageHeader kicker="Быт и адаптация" title="Культурная адаптация" desc={section.desc} />
+      <div className="info-card">
+        <h3>{section.title}</h3>
+        <ul style={{ paddingLeft: 18, marginTop: 12 }}>
+          {section.bullets.map(item => (
+            <li key={item} style={{ marginBottom: 10, color: 'var(--text-secondary)' }}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </>
+  )
 }

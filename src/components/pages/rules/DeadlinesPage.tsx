@@ -1,12 +1,34 @@
 import PageHeader from '../../ui/PageHeader'
+import { admissionDeadlines } from '../../../content/siteContent'
+
 export default function DeadlinesPage() {
-  return (<>
-    <PageHeader kicker="Правила приема" title="Сроки подачи заявок" desc="Расписание приёмной кампании 2025–2026 учебного года." />
-    <div className="steps-list">
-      {[['1 февраля – 30 апреля','Весенний приём — первая волна заявок. Рекомендуемый срок для максимального выбора программ.'],['1 мая – 30 июня','Летний приём — вторая волна. Свободные бюджетные места ограничены.'],['1 июля – 15 августа','Дополнительный набор — только на платные места.'],['15 августа','Финальный дедлайн подачи документов для начала учёбы в сентябре.']].map(([t,d],i)=>(
-        <div key={i} className="step-item"><div className="step-item-num">{i+1}</div><div className="step-item-body"><h4>{t}</h4><p>{d}</p></div></div>
-      ))}
-    </div>
-    <div className="info-card"><h3>Начало учебного года</h3><p>Осенний семестр начинается 1 сентября. Регистрируйтесь заранее, чтобы получить документы, оформить визу и прилететь вовремя.</p></div>
-  </>)
+  return (
+    <>
+      <PageHeader
+        kicker="Правила приема"
+        title="Сроки подачи заявок"
+        desc="Ключевые даты приёма иностранных абитуриентов по вашим документам на 2026-2027 учебный год."
+      />
+
+      <div className="steps-list">
+        {admissionDeadlines.map((item, index) => (
+          <div key={item.title} className="step-item">
+            <div className="step-item-num">{index + 1}</div>
+            <div className="step-item-body">
+              <h4>{item.title}</h4>
+              <p>{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="info-card">
+        <h3>Почему важно не тянуть до последней недели</h3>
+        <p>
+          Университет рекомендует планировать подачу заранее, чтобы успеть пройти собеседование,
+          получить финальное решение и подготовить миграционные шаги до начала учебного периода.
+        </p>
+      </div>
+    </>
+  )
 }

@@ -1,12 +1,57 @@
 import PageHeader from '../../ui/PageHeader'
+import { admissionRequirements, foundationDetails, kandasDetails } from '../../../content/siteContent'
+
 export default function RequirementsPage() {
-  return (<>
-    <PageHeader kicker="Правила приема" title="Общие требования" desc="Основные условия для поступления иностранных студентов в Университет Коркыт Ата." />
-    <div className="info-card"><h3>Кто может поступить?</h3><p>Иностранные граждане и лица без гражданства, имеющие документ об образовании (аттестат или диплом). Возрастных ограничений нет.</p></div>
-    <div className="steps-list">
-      {[['Наличие документа об образовании','Аттестат о среднем образовании для бакалавриата или диплом бакалавра для магистратуры.'],['Нотариально заверенный перевод','Все документы должны быть переведены на русский или казахский язык и заверены нотариусом.'],['Медицинская справка','Справка об отсутствии ВИЧ и туберкулёза. Выдаётся в медицинском учреждении вашей страны.'],['Действительный паспорт','Срок действия паспорта — не менее 18 месяцев на момент подачи заявки.']].map(([t,d],i)=>(
-        <div key={i} className="step-item"><div className="step-item-num">{i+1}</div><div className="step-item-body"><h4>{t}</h4><p>{d}</p></div></div>
-      ))}
-    </div>
-  </>)
+  return (
+    <>
+      <PageHeader
+        kicker="Правила приема"
+        title="Общие требования"
+        desc="Основные условия поступления для иностранных граждан по материалам университета на 2026-2027 учебный год."
+      />
+
+      <div className="info-card">
+        <h3>Ключевой принцип приёма</h3>
+        <p>
+          Для иностранных граждан на платной основе не требуется сдавать ЕНТ.
+          Поступление проводится по итогам собеседования с комиссией университета,
+          а базовый пакет документов загружается через портал онлайн.
+        </p>
+      </div>
+
+      <div className="steps-list">
+        {admissionRequirements.map((item, index) => (
+          <div key={item} className="step-item">
+            <div className="step-item-num">{index + 1}</div>
+            <div className="step-item-body">
+              <h4>Требование {index + 1}</h4>
+              <p>{item}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="info-card">
+        <h3>Если вы ещё не владеете языком обучения</h3>
+        <ul style={{ paddingLeft: 18, marginTop: 12 }}>
+          {foundationDetails.map(item => (
+            <li key={item} style={{ marginBottom: 10, color: 'var(--text-secondary)' }}>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div className="info-card">
+        <h3>Важно для қандастар</h3>
+        <ul style={{ paddingLeft: 18, marginTop: 12 }}>
+          {kandasDetails.map(item => (
+            <li key={item} style={{ marginBottom: 10, color: 'var(--text-secondary)' }}>
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
+  )
 }

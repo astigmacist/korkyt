@@ -1,4 +1,20 @@
 import PageHeader from '../../ui/PageHeader'
+import { lifeSections } from '../../../content/siteContent'
+
 export default function DormsPage() {
-  return (<><PageHeader kicker="Быт и адаптация" title="Общежития и жилье" desc="5 общежитий на кампусе. Место гарантировано каждому иностранному студенту." /><div className="info-card"><h3>Подробнее</h3><p>Университет обеспечивает комфортные условия для проживания и учёбы иностранных студентов. По всем вопросам обращайтесь в Международный отдел.</p></div></>)
+  const section = lifeSections.dorms
+
+  return (
+    <>
+      <PageHeader kicker="Быт и адаптация" title="Общежития и жилье" desc={section.desc} />
+      <div className="info-card">
+        <h3>{section.title}</h3>
+        <ul style={{ paddingLeft: 18, marginTop: 12 }}>
+          {section.bullets.map(item => (
+            <li key={item} style={{ marginBottom: 10, color: 'var(--text-secondary)' }}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </>
+  )
 }

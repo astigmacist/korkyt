@@ -1,4 +1,20 @@
 import PageHeader from '../../ui/PageHeader'
+import { lifeSections } from '../../../content/siteContent'
+
 export default function TransportPage() {
-  return (<><PageHeader kicker="Быт и адаптация" title="Транспорт" desc="Регулярное автобусное сообщение кампус — центр города. Такси и аренда велосипедов." /><div className="info-card"><h3>Подробнее</h3><p>Университет обеспечивает комфортные условия для проживания и учёбы иностранных студентов. По всем вопросам обращайтесь в Международный отдел.</p></div></>)
+  const section = lifeSections.transport
+
+  return (
+    <>
+      <PageHeader kicker="Быт и адаптация" title="Транспорт" desc={section.desc} />
+      <div className="info-card">
+        <h3>{section.title}</h3>
+        <ul style={{ paddingLeft: 18, marginTop: 12 }}>
+          {section.bullets.map(item => (
+            <li key={item} style={{ marginBottom: 10, color: 'var(--text-secondary)' }}>{item}</li>
+          ))}
+        </ul>
+      </div>
+    </>
+  )
 }

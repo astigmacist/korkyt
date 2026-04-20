@@ -5,10 +5,10 @@ import './Stats.css'
 
 const statsData = [
   { value: 1937, key: 'stats.founded', icon: '🏛' },
-  { value: 10273, key: 'stats.students', icon: '👥' },
-  { value: 477, key: 'stats.faculty', icon: '👨‍🏫' },
-  { value: 9, key: 'stats.buildings', icon: '🏗' },
-  { value: 5, key: 'stats.dormitories', icon: '🏠' },
+  { value: 10000, key: 'stats.students', icon: '👥' },
+  { value: 500, key: 'stats.faculty', icon: '👨‍🏫' },
+  { value: 10, key: 'stats.buildings', icon: '🏗' },
+  { value: 6, key: 'stats.dormitories', icon: '🏠' },
 ]
 
 function StatCard({ value, label, icon, visible }: { value: number; label: string; icon: string; visible: boolean }) {

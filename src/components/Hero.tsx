@@ -13,13 +13,6 @@ export default function Hero() {
       </div>
 
       <div className="hero-content">
-        <div className="hero-badge-wrap">
-          <span className="hero-badge">
-            <span className="badge-dot" />
-            {t('hero.badge')}
-          </span>
-        </div>
-
         <h1 className="hero-title">
           {t('hero.title1')}
           <br />

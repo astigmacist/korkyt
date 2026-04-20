@@ -1,16 +1,56 @@
 import PageHeader from '../../ui/PageHeader'
-const timeline=[{date:'05.04.2025',event:'Заявка получена',done:true},{date:'06.04.2025',event:'Проверка документов',done:true},{date:'08.04.2025',event:'Рассмотрение комиссией',done:false,active:true},{date:'—',event:'Решение по заявке',done:false},{date:'—',event:'Оформление приглашения',done:false}]
+
+const timeline = [
+  {
+    title: 'Подача формы и документов',
+    desc: 'Абитуриент отправляет заявку и загружает базовый пакет документов в портал.',
+  },
+  {
+    title: 'Проверка полноты пакета',
+    desc: 'После полной загрузки документов университет переводит заявку к этапу собеседования.',
+  },
+  {
+    title: 'Собеседование',
+    desc: 'Дата сообщается в течение 3 рабочих дней после полной загрузки пакета.',
+  },
+  {
+    title: 'Результат в личном кабинете',
+    desc: 'Итог собеседования размещается в кабинете в течение 3 дней.',
+  },
+  {
+    title: 'Приказ о зачислении',
+    desc: 'Финальное решение публикуется до 25 августа.',
+  },
+]
+
 export default function StatusPage() {
-  return (<>
-    <PageHeader kicker="Подача заявки" title="Статус заявки" desc="Отслеживайте прогресс рассмотрения вашей заявки в реальном времени." />
-    <div className="info-card" style={{marginBottom:24}}><h3>Заявка #KA-2025-001</h3><p>Программа: Бакалавриат · Специальность: Информационные технологии · Дата подачи: 05.04.2025</p></div>
-    <div className="steps-list">
-      {timeline.map((e,i)=>(
-        <div key={i} className="step-item">
-          <div className="step-item-num" style={{background:e.done?'#059669':e.active?'var(--accent)':'var(--border)',color:'#fff'}}>{i+1}</div>
-          <div className="step-item-body"><h4 style={{color:e.done||e.active?'var(--text-primary)':'var(--text-tertiary)'}}>{e.event}</h4><p>{e.date}{e.active?' · В процессе..':''}</p></div>
-        </div>
-      ))}
-    </div>
-  </>)
+  return (
+    <>
+      <PageHeader
+        kicker="Подача заявки"
+        title="Статус заявки"
+        desc="Пока backend-часть кабинета ещё развивается, статус страницы можно использовать как понятную карту официального admission-процесса."
+      />
+
+      <div className="info-card" style={{ marginBottom: 24 }}>
+        <h3>Как читать этот статус</h3>
+        <p>
+          Здесь должны отображаться текущий этап заявки, дата собеседования, решение комиссии и
+          дальнейшие действия. Ниже приведён реальный порядок этапов по вашим документам.
+        </p>
+      </div>
+
+      <div className="steps-list">
+        {timeline.map((item, index) => (
+          <div key={item.title} className="step-item">
+            <div className="step-item-num">{index + 1}</div>
+            <div className="step-item-body">
+              <h4>{item.title}</h4>
+              <p>{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  )
 }
