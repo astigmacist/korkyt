@@ -1,5 +1,7 @@
 import PageHeader from '../../ui/PageHeader'
-import { admissionDeadlines, requiredDocuments } from '../../../content/siteContent'
+import { FileText } from 'lucide-react'
+import { admissionDeadlines, admissionSubmissionChecklist, requiredDocuments } from '../../../content/siteContent'
+import DocumentRequirementCard from '../../ui/DocumentRequirementCard'
 
 export default function SubmitPage() {
   return (
@@ -7,7 +9,7 @@ export default function SubmitPage() {
       <PageHeader
         kicker="Путь поступления"
         title="Подача документов"
-        desc="После выбора программы начинается полностью онлайн-этап: вы заполняете форму и загружаете электронные копии документов."
+        desc="Заполните форму и загрузите документы онлайн."
       />
 
       <div className="info-card">
@@ -30,12 +32,18 @@ export default function SubmitPage() {
         ))}
       </div>
 
+      <div className="info-card">
+        <h3>Перед отправкой формы</h3>
+        <ul className="content-list">
+          {admissionSubmissionChecklist.map(item => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+      </div>
+
       <div className="info-grid">
         {requiredDocuments.map(doc => (
-          <div key={doc.title} className="info-grid-card">
-            <h4>{doc.title}</h4>
-            <p>{doc.desc}</p>
-          </div>
+          <DocumentRequirementCard key={doc.title} doc={doc} icon={<FileText size={18} />} />
         ))}
       </div>
     </>

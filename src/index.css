@@ -880,6 +880,203 @@ ul { margin: 0; padding: 0; list-style: none; }
   line-height: 1.6;
 }
 
+.document-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.document-card-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.format-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.format-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--accent-subtle);
+  color: var(--accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.document-meta {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.document-note {
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+}
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.status-chip-strong {
+  background: rgba(5, 150, 105, 0.08);
+  border-color: rgba(5, 150, 105, 0.12);
+  color: #047857;
+}
+
+.content-list {
+  margin-top: 14px;
+  padding-left: 18px;
+}
+
+.content-list li {
+  margin-bottom: 10px;
+  color: var(--text-secondary);
+}
+
+.application-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.9fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.application-form-card {
+  margin-bottom: 0;
+}
+
+.application-aside {
+  display: grid;
+  gap: 20px;
+}
+
+.application-summary {
+  margin-bottom: 0;
+}
+
+.application-field-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 16px;
+}
+
+.section-note {
+  margin-bottom: 16px;
+  color: var(--text-tertiary);
+  line-height: 1.65;
+}
+
+.upload-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.upload-field {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface-2);
+  padding: 20px;
+}
+
+.upload-desc {
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.upload-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 16px;
+  padding: 16px 18px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.upload-shell:hover {
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+}
+
+.upload-shell input {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.upload-shell-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.upload-shell-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-tertiary);
+}
+
+.upload-file-list {
+  margin-top: 12px;
+  padding-left: 18px;
+}
+
+.upload-file-list li {
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+}
+
+.consent-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 20px 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.consent-row input {
+  margin-top: 4px;
+}
+
+.application-submit-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(5, 150, 105, 0.08);
+  color: #047857;
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
 /* ===== STEPS / ROADMAP CARDS ===== */
 .steps-list {
   display: flex;
@@ -956,6 +1153,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   .topbar-breadcrumb {
     display: none;
   }
+
+  .application-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -964,4 +1165,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   .page-title { font-size: 1.5rem; }
   .topbar-lang-btn { min-width: 36px; }
   .topbar-apply-btn { padding: 8px 14px; }
+  .application-field-grid { grid-template-columns: 1fr; }
+  .info-card { padding: 22px 18px; }
+  .step-item { padding: 18px; gap: 14px; }
+  .document-card-heading { flex-direction: column; align-items: flex-start; }
 }

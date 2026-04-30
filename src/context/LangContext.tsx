@@ -106,9 +106,9 @@ const translations: Record<string, Record<Lang, string>> = {
 
   'j.3': { ru: 'Загрузить документы', en: 'Upload Documents', kz: 'Құжаттарды жүктеу' },
   'j.3.desc': {
-    ru: 'Загрузите паспорт, документ об образовании, приложение, переводы и фотографии в электронном виде.',
-    en: 'Upload your passport, education document, transcript, translations, and photos in digital form.',
-    kz: 'Паспортты, білімі туралы құжатты, қосымшаны, аудармаларды және фотоларды электронды түрде жүктеңіз.'
+    ru: 'Загрузите паспорт, документ об образовании и фотографии 3x4. Для документов лучше PDF, для фото — JPG, JPEG или PNG.',
+    en: 'Upload your passport, education document, and 3x4 photos. PDF works best for documents, while JPG, JPEG, or PNG fit photos.',
+    kz: 'Паспортты, білімі туралы құжатты және 3x4 фотоларды жүктеңіз. Құжаттар үшін PDF, ал фото үшін JPG, JPEG немесе PNG ыңғайлы.'
   },
 
   'j.4': { ru: 'Получить дату собеседования', en: 'Receive the Interview Date', kz: 'Сұхбат күнін алу' },
